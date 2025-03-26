@@ -11,7 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { useColorModeValue } from "../ui/color-mode";
 import { CiMenuFries } from "react-icons/ci";
-import CustomDrawer from "../customDrawer";
+import CustomDrawer from "../CustomDrawer";
 import { FaCode } from "react-icons/fa";
 
 const Navbar = ({ isSticky }) => {
