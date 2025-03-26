@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container } from "@chakra-ui/react";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
-import About from "./components/About/about";
+import About from "./components/About/About";
 import Services from "./components/Services/Services";
 import Skills from "./components/Skills/Skills";
 import Portfolio from "./components/Portfolio/Portfolio";
