@@ -1,11 +1,10 @@
 # 🌟 Developer Portfolio
 
 [![Live Demo](https://img.shields.io/badge/Live_Demo-Online-brightgreen?style=for-the-badge)](https://your-portfolio-url.com)
-[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
 A modern, high-performance portfolio website with contact functionality built with cutting-edge technologies.
 
-![Portfolio Showcase](screenshots/portfolio-preview.gif) _Replace with your actual screenshot_
+![Portfolio Showcase](screenshots/portfolio-preview.gif) 
 
 ## ✨ Features
 
@@ -100,4 +99,5 @@ cd portfolio
 
 ### 📞 Contact
 
-Your Name -
+Your Name - Ambali Oladele Ridwan
+Phone No - 09056862641
