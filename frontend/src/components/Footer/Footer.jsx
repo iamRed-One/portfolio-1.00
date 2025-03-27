@@ -24,7 +24,7 @@ const Footer = () => {
 							</Icon>
 						</Text>
 					</Link>
-					<Text fontSize={{ base: 15, md: 17 }}>
+					<Text fontSize={{ base: 15, md: 17 }} w={{ base: "100%", md: "50%" }}>
 						Thank you for going through my portfolio. Click on the hire button
 						above to set your project in motion.
 					</Text>

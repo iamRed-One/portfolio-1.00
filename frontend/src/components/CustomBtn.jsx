@@ -7,8 +7,8 @@ const CustomBtn = ({ children, styles, bgEffect, b4Radius, onClick }) => {
 		<Button
 			onClick={onClick}
 			style={styles}
-			p={"28px 40px"}
-			fontSize={{ base: 16, md: 18 }}
+			p={"25px 40px"}
+			fontSize={{ base: 14, md: 18 }}
 			rounded={"md"}
 			size={"lg"}
 			bg={"transparent"}
@@ -32,7 +32,7 @@ const CustomBtn = ({ children, styles, bgEffect, b4Radius, onClick }) => {
 			}}
 			_hover={{ _before: { h: "80%" } }}
 			letterSpacing={2}
-			className="font-medium"
+			className="font-semib"
 		>
 			{children}
 		</Button>

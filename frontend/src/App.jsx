@@ -10,11 +10,21 @@ import Contact from "./components/Contact/Contact";
 import BackToTop from "./components/BackToTop";
 import { Toaster } from "./components/ui/toaster";
 import Footer from "./components/Footer/Footer";
+import FullPageLoader from "./components/FullPageLoader";
+import usePageLoad from "./context/usePageLoad";
 
 function App() {
+	const backgroundImage = "/images/bg-image.webp";
+	const { isLoading } = usePageLoad(backgroundImage);
 	const [isSticky, setSticky] = useState(false);
 
 	useEffect(() => {
+		// if (isLoading) {
+		// 	document.body.style.overflow = "hidden";
+		// } else {
+		// 	document.body.style.overflow = "auto";
+		// }
+
 		window.addEventListener("scroll", handleScroll);
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
@@ -30,28 +40,30 @@ function App() {
 	};
 
 	return (
-		<Container fluid margin={0} padding={0} pos={"relative"}>
-			<BackToTop isSticky={isSticky} />
-			<Container
-				fluid
-				data-aos="fade-up"
-				bgImage={"url(/images/bg-image.webp)"}
-				bgRepeat={"no-repeat"}
-				backgroundPosition={"center"}
-				bgAttachment={"fixed"}
-				bgSize={"cover"}
-			>
-				<Navbar isSticky={isSticky} />
-				<Hero />
+		<>
+			{isLoading && <FullPageLoader />}
+			<Container fluid margin={0} padding={0} pos={"relative"}>
+				<BackToTop isSticky={isSticky} />
+				<Container
+					fluid
+					bgImage={`url(${backgroundImage})`}
+					bgRepeat={"no-repeat"}
+					backgroundPosition={"center"}
+					bgAttachment={"fixed"}
+					bgSize={"cover"}
+				>
+					<Navbar isSticky={isSticky} />
+					<Hero />
+				</Container>
+				<About />
+				<Services />
+				<Skills />
+				<Portfolio />
+				<Contact />
+				<Footer />
+				<Toaster />
 			</Container>
-			<About />
-			<Services />
-			<Skills />
-			<Portfolio />
-			<Contact />
-			<Footer />
-			<Toaster />
-		</Container>
+		</>
 	);
 }
 

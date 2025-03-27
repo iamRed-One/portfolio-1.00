@@ -8,7 +8,7 @@ const CustomDrawer = ({ navItems }) => {
 				<Drawer.Positioner>
 					<Drawer.Content bg={"#fff"}>
 						<Drawer.CloseTrigger asChild>
-							<CloseButton size={"lg"} />
+							<CloseButton size={"sm"} />
 						</Drawer.CloseTrigger>
 						<Drawer.Body>
 							<Flex

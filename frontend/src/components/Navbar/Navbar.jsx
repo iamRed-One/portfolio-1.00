@@ -40,7 +40,7 @@ const Navbar = ({ isSticky }) => {
 		<Container
 			maxW="full"
 			padding={isSticky ? 3 : 7}
-			transition={"all .2s ease-in-out"}
+			transition={"padding .2s ease-in-out"}
 			bg={isSticky && "blackAlpha.800"}
 			display={"flex"}
 			justifyContent={"center"}
@@ -59,7 +59,7 @@ const Navbar = ({ isSticky }) => {
 					>
 						<Box>
 							<Link href="" color={"white"} textDecoration={"none"}>
-								<Text fontSize={{ base: 23, md: 30 }} className="font-bold">
+								<Text fontSize={{ base: 18, md: 30 }} className="font-bold">
 									C
 									<Text as={"span"} color={"orange.400"}>
 										0
@@ -98,7 +98,7 @@ const Navbar = ({ isSticky }) => {
 							<Box display={{ base: "block", md: "none" }}>
 								<Drawer.Trigger asChild>
 									<Button size={"sm"}>
-										<CiMenuFries />
+										<CiMenuFries fontSize={20} />
 									</Button>
 								</Drawer.Trigger>
 							</Box>

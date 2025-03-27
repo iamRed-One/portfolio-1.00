@@ -14,6 +14,7 @@ import services from "./Data";
 const Services = () => {
 	return (
 		<Container
+			className="appear"
 			id="services"
 			maxW={"full"}
 			bg={"blackAlpha.800"}

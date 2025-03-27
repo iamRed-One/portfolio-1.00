@@ -106,7 +106,7 @@ const Contact = () => {
 	};
 
 	return (
-		<Container id="contact" paddingBlock={"80px"} paddingInline={"30px"}>
+		<Container id="contact" paddingBlock={"80px"} paddingInline={"12px"}>
 			<Container maxW={"1300px"}>
 				<HeaderText title={"Contact"} desc={"Get in touch"} />
 
@@ -138,11 +138,11 @@ const Contact = () => {
 									<Box>
 										<Text
 											className="font-medium"
-											fontSize={{ base: 17, md: 18 }}
+											fontSize={{ base: 15, md: 18 }}
 										>
 											{contact.placeHolder}
 										</Text>
-										<Text fontSize={{ base: 16, md: 17 }} className="font-thin">
+										<Text fontSize={{ base: 14, md: 17 }} className="font-thin">
 											{contact.detail}
 										</Text>
 									</Box>
@@ -151,10 +151,20 @@ const Contact = () => {
 						</Flex>
 					</Box>
 					<Box w={{ base: "full", md: "initial" }}>
-						<Text as={"h2"} fontSize={25} className="font-semib">
+						<Text
+							as={"h2"}
+							fontSize={{ base: 20, md: 25 }}
+							className="font-semib"
+						>
 							Message me
 						</Text>
-						<Flex className="fields" mt={"25px"} flexDir={"column"} gap={5}>
+						<Flex
+							className="fields"
+							mt={"25px"}
+							flexDir={"column"}
+							gap={5}
+							fontSize={{ base: 14, md: 18 }}
+						>
 							<Flex gap={5} flexDir={{ base: "column", md: "row" }} w={"full"}>
 								<label style={{ cursor: "pointer" }}>
 									Name

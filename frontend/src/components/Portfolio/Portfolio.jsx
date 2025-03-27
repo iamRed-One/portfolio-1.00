@@ -41,8 +41,8 @@ const Portfolio = () => {
 									display={"flex"}
 									justifyContent={"center"}
 									alignItems={"center"}
-									fontSize={{ base: 15, md: 18 }}
-									w={{ base: "100px", md: "140px" }}
+									fontSize={{ base: 13, md: 18 }}
+									w={{ base: "90px", md: "140px" }}
 									h={"50px"}
 									rounded={"md"}
 									bg={"transparent"}
@@ -88,7 +88,7 @@ const Portfolio = () => {
 												// 	base: "100%",
 												// 	md: "350px",
 												// }}
-												h={"250px"}
+												h={{ base: "220px", md: "250px" }}
 												border={"7px solid"}
 												borderColor={"orange.400"}
 												pos={"relative"}
@@ -135,7 +135,7 @@ const Portfolio = () => {
 													>
 														<Text
 															as={"h1"}
-															fontSize={33}
+															fontSize={{ base: 20, md: 30 }}
 															color={"black"}
 															className="font-bold"
 															opacity={1}
@@ -146,7 +146,7 @@ const Portfolio = () => {
 															<Link
 																href={port.gitHubUrl}
 																target="_blank"
-																fontSize={18}
+																fontSize={{ base: 15, md: 18 }}
 																_hover={{
 																	textDecoration: "none",
 																	borderColor: "black",
@@ -163,7 +163,7 @@ const Portfolio = () => {
 															<Link
 																href={port.liveSite}
 																target="_blank"
-																fontSize={18}
+																fontSize={{ base: 15, md: 18 }}
 																_hover={{
 																	textDecoration: "none",
 																	borderColor: "black",

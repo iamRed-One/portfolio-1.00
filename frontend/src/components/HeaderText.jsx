@@ -27,7 +27,7 @@ const HeaderText = ({ title, desc }) => {
 				gap={3}
 			>
 				<Text as={"span"} w={"70px"} h={"3px"} bg={"orange.400"}></Text>
-				<Text fontSize={18} className="font-medium">
+				<Text fontSize={{ base: 15, md: 18 }} className="font-medium">
 					{desc}
 				</Text>
 				<Text as={"span"} w={"70px"} h={"3px"} bg={"orange.400"}></Text>
