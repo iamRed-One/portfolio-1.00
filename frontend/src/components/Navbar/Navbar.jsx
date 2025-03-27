@@ -59,7 +59,7 @@ const Navbar = ({ isSticky }) => {
 					>
 						<Box>
 							<Link href="" color={"white"} textDecoration={"none"}>
-								<Text fontSize={30} fontWeight={"bold"} className="font-bold">
+								<Text fontSize={{ base: 23, md: 30 }} className="font-bold">
 									C
 									<Text as={"span"} color={"orange.400"}>
 										0
@@ -95,9 +95,9 @@ const Navbar = ({ isSticky }) => {
 								))}
 							</HStack>
 
-							<Box display={{ base: "block", md: "none" }} fontSize={17}>
+							<Box display={{ base: "block", md: "none" }}>
 								<Drawer.Trigger asChild>
-									<Button bg={"orange.400"}>
+									<Button size={"sm"}>
 										<CiMenuFries />
 									</Button>
 								</Drawer.Trigger>

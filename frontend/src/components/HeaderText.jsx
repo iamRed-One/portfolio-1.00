@@ -12,7 +12,12 @@ const HeaderText = ({ title, desc }) => {
 			mb={"60px"}
 			gap={1}
 		>
-			<Text as={"h2"} fontWeight={"bold"} fontSize={40} className="font-bold">
+			<Text
+				as={"h2"}
+				fontWeight={"bold"}
+				fontSize={{ base: 25, md: 40 }}
+				className="font-bold"
+			>
 				{title}
 			</Text>
 			<Box

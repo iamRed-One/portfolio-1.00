@@ -10,6 +10,7 @@ const About = () => {
 	return (
 		<Container
 			paddingBlock={"80px"}
+			paddingInline={"30px"}
 			id="about"
 			transition={"all .2s ease-in-out"}
 		>
@@ -25,7 +26,7 @@ const About = () => {
 			>
 				<Box
 					rounded={"lg"}
-					w={"340px"}
+					w={{ base: "270px", md: "340px" }}
 					className="card"
 					perspective={"1000px"}
 					cursor={"pointer"}
@@ -41,9 +42,9 @@ const About = () => {
 						<Box className="front-face" backfaceVisibility={"hidden"}>
 							<Image
 								width={"100%"}
-								h={"470px"}
+								// h={"470px"}
 								borderRadius={"10px"}
-								src="/images/profile-pic-1r.jpg"
+								src="/images/profile-pic.webp"
 							/>
 						</Box>
 						<Box
@@ -67,14 +68,14 @@ const About = () => {
 							<Box display={"flex"} flexDir={"column"} gap={4}>
 								<Text
 									as={"h2"}
-									fontSize={50}
+									fontSize={{ base: 30, md: 50 }}
 									lineHeight={1}
 									className="font-bold"
 									textTransform={"uppercase"}
 								>
 									Ridwan
 								</Text>
-								<Text fontSize={25} className="font-medium">
+								<Text fontSize={{ base: 20, md: 25 }} className="font-medium">
 									I'll be your Developer
 								</Text>
 								<SocialLinks />
@@ -97,15 +98,16 @@ const About = () => {
 				<Box w={{ base: "full", md: "50%" }}>
 					<Text
 						as="h3"
-						fontSize={40}
+						fontSize={{ base: 25, md: 40 }}
 						fontWeight={"bold"}
 						className="font-semib"
 						textAlign={{ base: "center", md: "initial" }}
 						textWrap={"no-wrap"}
+						transition={".4 ease-in-out"}
 					>
-						I'm Ridwan and I'm{" "}
+						I'm Ridwan and I'm a{" "}
 						<ReactTyped
-							strings={["Developer"]}
+							strings={["Front-End Developer"]}
 							typeSpeed={130}
 							backSpeed={40}
 							style={{ color: "#fb923c" }}
@@ -113,7 +115,7 @@ const About = () => {
 						/>
 					</Text>
 					<Text
-						fontSize={18}
+						fontSize={{ base: 15, md: 18 }}
 						textIndent={5}
 						_firstLetter={{
 							fontSize: "39px",

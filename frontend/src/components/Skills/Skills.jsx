@@ -5,7 +5,7 @@ import skills from "./Data";
 
 const Skills = () => {
 	return (
-		<Container paddingBlock={"80px"} id="skills">
+		<Container paddingBlock={"80px"} paddingInline={"30px"} id="skills">
 			<Container maxW={"1300px"}>
 				<HeaderText title={"My Skills"} desc={"What i know"} />
 
@@ -14,14 +14,14 @@ const Skills = () => {
 					alignItems={"center"}
 					mt={"50px"}
 					textAlign={{ base: "center", md: "start" }}
-					gap={10}
+					gap={20}
 				>
 					<Box>
-						<Text as="h1" fontSize={40} fontWeight={"bolder"}>
+						<Text as="h1" fontSize={{ base: 25, md: 40 }} fontWeight={"bolder"}>
 							My Creative Skills
 						</Text>
 						<Text
-							fontSize={17}
+							fontSize={{ base: 15, md: 16 }}
 							textIndent={5}
 							_firstLetter={{
 								fontSize: "39px",
@@ -55,6 +55,11 @@ const Skills = () => {
 									className="service-card"
 									bg={skillBgColor}
 									w={"120px"}
+									h={"110px"}
+									display={"flex"}
+									flexDir={"column"}
+									justifyContent={"center"}
+									alignItems={"center"}
 									rounded={"lg"}
 									padding={"17px 10px"}
 									textAlign={"center"}
@@ -93,7 +98,11 @@ const Skills = () => {
 										>
 											{percentage}
 										</Text> */}
-									<Icon color={skillColor} fontSize={40} mb={3}>
+									<Icon
+										color={skillColor}
+										fontSize={{ base: 25, md: 40 }}
+										mb={3}
+									>
 										{icon}
 									</Icon>
 									<Text

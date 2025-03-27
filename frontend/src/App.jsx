@@ -35,7 +35,7 @@ function App() {
 			<Container
 				fluid
 				data-aos="fade-up"
-				bgImage={"url(/images/bg-image.jpg)"}
+				bgImage={"url(/images/bg-image.webp)"}
 				bgRepeat={"no-repeat"}
 				backgroundPosition={"center"}
 				bgAttachment={"fixed"}

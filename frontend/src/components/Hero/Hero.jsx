@@ -6,16 +6,12 @@ import CustomBtn from "../CustomBtn";
 
 const Hero = () => {
 	return (
-		<Container
-			fluid
-			id="home"
-			h={"calc(100vh)"}
-			maxW={"1300px"}
-			placeContent={"center"}
-			justifyContent={{ base: "center", md: "start" }}
-		>
+		<Container fluid id="home" h={"100vh"} maxW={"1300px"}>
 			<Flex
 				flexDir={{ base: "column", md: "column" }}
+				justifyContent={"center"}
+				alignItems={{ base: "center", md: "start" }}
+				h={"full"}
 				textAlign={{ base: "center", md: "start" }}
 				color={useColorModeValue("white", "white")}
 				gap={{ base: 2, md: "0" }}
@@ -36,6 +32,7 @@ const Hero = () => {
 					<ReactTyped
 						strings={["Mern Stack Developer"]}
 						typeSpeed={100}
+						style={{ color: "#fb923c" }}
 						cursorChar="{}"
 						backSpeed={20}
 						loop

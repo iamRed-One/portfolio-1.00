@@ -18,22 +18,23 @@ const Services = () => {
 			maxW={"full"}
 			bg={"blackAlpha.800"}
 			paddingBlock={"80px"}
+			paddingInline={"30px"}
 			color={"#fff"}
 		>
 			<Container maxW={"1300px"}>
 				<HeaderText title={"My services"} desc={"what i do"} />
 
-				<Flex justifyContent={"center"} flexWrap={"wrap"} gap={7} w={"100%"}>
+				<Flex justifyContent={"center"} flexWrap={"wrap"} gap={5} w={"100%"}>
 					{services.map(({ num, icon, title, desc }) => (
 						<Box
 							className="service-card"
 							key={num}
 							w={{
-								base: "320px",
+								base: "100%",
 								md: "350px",
 							}}
 							bg={"orange.400"}
-							padding={"20px 40px"}
+							padding={"25px 20px"}
 							rounded={"lg"}
 							display={"flex"}
 							flexDir={"column"}
@@ -47,7 +48,10 @@ const Services = () => {
 								left: 0,
 								height: "100%",
 								width: "100%",
-								clipPath: "circle(25% at 0 0)",
+								clipPath: {
+									base: "circle(20% at 0 0)",
+									md: "circle(25% at 0 0)",
+								},
 								opacity: 0.2,
 								transition: "0.3s",
 								bg: "orange.100",
@@ -55,7 +59,7 @@ const Services = () => {
 						>
 							<Text
 								as={"span"}
-								fontSize={26}
+								fontSize={{ base: 20, md: 25 }}
 								top={"1.2rem"}
 								left={"1.4rem"}
 								position={"absolute"}
@@ -64,34 +68,25 @@ const Services = () => {
 							</Text>
 
 							<Box
-								mt={"29px"}
+								mt={{ base: "20px", md: "30px" }}
 								display="flex"
 								flexDir={"column"}
 								alignItems={"center"}
 								gap={4}
 								zIndex={3}
 							>
-								<Icon textAlign={"center"} size={"lg"}>
+								<Icon textAlign={"center"} size={{ base: "sm", md: "lg" }}>
 									{icon}
 								</Icon>
 								<Text
 									as={"h2"}
-									fontSize={24}
-									color={"orange.700"}
+									fontSize={{ base: 22, md: 25 }}
 									fontWeight={"bolder"}
+									color={"blackAlpha.800"}
 								>
-									<Link
-										textDecoration={"none"}
-										target="_blanck"
-										color={"blackAlpha.800"}
-										href="#"
-										outline={"none"}
-										_hover={{ scale: 1.1, transition: "all .3s ease-in-out" }}
-									>
-										{title}
-									</Link>
+									{title}
 								</Text>
-								<Text fontSize={15}>{desc}</Text>
+								<Text fontSize={{ base: 13, md: 15 }}>{desc}</Text>
 							</Box>
 						</Box>
 					))}

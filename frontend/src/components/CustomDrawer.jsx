@@ -6,7 +6,7 @@ const CustomDrawer = ({ navItems }) => {
 		<Portal>
 			<Drawer.Backdrop>
 				<Drawer.Positioner>
-					<Drawer.Content>
+					<Drawer.Content bg={"#fff"}>
 						<Drawer.CloseTrigger asChild>
 							<CloseButton size={"lg"} />
 						</Drawer.CloseTrigger>

@@ -5,6 +5,7 @@ import {
 	Icon,
 	Image,
 	Link,
+	SimpleGrid,
 	Tabs,
 	Text,
 } from "@chakra-ui/react";
@@ -20,6 +21,7 @@ const Portfolio = () => {
 			maxW={"full"}
 			bg={"blackAlpha.800"}
 			paddingBlock={"80px"}
+			paddingInline={"30px"}
 			color={"#fff"}
 		>
 			<Container maxW={"1300px"}>
@@ -39,9 +41,9 @@ const Portfolio = () => {
 									display={"flex"}
 									justifyContent={"center"}
 									alignItems={"center"}
-									fontSize={18}
-									w={"140px"}
-									h={"54px"}
+									fontSize={{ base: 15, md: 18 }}
+									w={{ base: "100px", md: "140px" }}
+									h={"50px"}
 									rounded={"md"}
 									bg={"transparent"}
 								>
@@ -72,7 +74,8 @@ const Portfolio = () => {
 										animationDuration: "120ms",
 									}}
 								>
-									<Flex
+									<SimpleGrid
+										minChildWidth={"320px"}
 										justifyContent={"center"}
 										alignItems={"center"}
 										flexWrap={"wrap"}
@@ -81,15 +84,15 @@ const Portfolio = () => {
 										{item.content.map((port, index) => (
 											<Box
 												key={index}
-												w={{
-													base: "320px",
-													md: "350px",
-												}}
+												// w={{
+												// 	base: "100%",
+												// 	md: "350px",
+												// }}
 												h={"250px"}
-												border={"10px solid"}
+												border={"7px solid"}
 												borderColor={"orange.400"}
 												pos={"relative"}
-												rounded={"sm"}
+												rounded={"lg"}
 												cursor={"pointer"}
 												className="show-box-container"
 											>
@@ -179,7 +182,7 @@ const Portfolio = () => {
 												</Box>
 											</Box>
 										))}
-									</Flex>
+									</SimpleGrid>
 								</Tabs.Content>
 							))}
 						</Box>

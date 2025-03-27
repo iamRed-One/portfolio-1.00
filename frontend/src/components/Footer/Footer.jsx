@@ -9,7 +9,11 @@ const Footer = () => {
 			<Container maxW={"1300px"}>
 				<VStack spaceY={4} textAlign={"center"}>
 					<Link href="" color={"white"} textDecoration={"none"}>
-						<Text fontSize={30} fontWeight={"bold"} className="font-bold">
+						<Text
+							fontSize={{ base: 23, md: 30 }}
+							fontWeight={"bold"}
+							className="font-bold"
+						>
 							C
 							<Text as={"span"} color={"orange.400"}>
 								0
@@ -20,7 +24,7 @@ const Footer = () => {
 							</Icon>
 						</Text>
 					</Link>
-					<Text>
+					<Text fontSize={{ base: 15, md: 17 }}>
 						Thank you for going through my portfolio. Click on the hire button
 						above to set your project in motion.
 					</Text>
@@ -28,7 +32,9 @@ const Footer = () => {
 					<Box paddingBlock={5}>
 						<SocialLinks />
 					</Box>
-					<Text>Copyright &copy;2025 | Designed by Ridwan</Text>
+					<Text fontSize={{ base: 15, md: 17 }}>
+						Copyright &copy;2025 | Designed by Ridwan
+					</Text>
 				</VStack>
 			</Container>
 		</Container>

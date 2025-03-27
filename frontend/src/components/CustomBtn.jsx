@@ -8,7 +8,7 @@ const CustomBtn = ({ children, styles, bgEffect, b4Radius, onClick }) => {
 			onClick={onClick}
 			style={styles}
 			p={"28px 40px"}
-			fontSize={18}
+			fontSize={{ base: 16, md: 18 }}
 			rounded={"md"}
 			size={"lg"}
 			bg={"transparent"}
