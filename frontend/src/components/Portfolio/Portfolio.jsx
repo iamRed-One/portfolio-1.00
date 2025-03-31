@@ -21,7 +21,7 @@ const Portfolio = () => {
 			maxW={"full"}
 			bg={"blackAlpha.800"}
 			paddingBlock={"80px"}
-			paddingInline={"30px"}
+			paddingInline={"10px"}
 			color={"#fff"}
 		>
 			<Container maxW={"1300px"}>

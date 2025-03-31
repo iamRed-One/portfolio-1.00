@@ -171,6 +171,7 @@ const Contact = () => {
 									<Input
 										type="text"
 										mt={2}
+										fontSize={{ base: 13, md: 16 }}
 										focusRingColor={"orange.300"}
 										ringColor={"rgba(66, 153, 225, 0.6)"}
 										borderColor={"rgba(196, 196, 196, 0.6)"}
@@ -187,6 +188,7 @@ const Contact = () => {
 									<Input
 										type="email"
 										mt={2}
+										fontSize={{ base: 13, md: 16 }}
 										focusRingColor={"orange.300"}
 										ringColor={"rgba(66, 153, 225, 0.6)"}
 										borderColor={"rgba(196, 196, 196, 0.6)"}
@@ -204,6 +206,7 @@ const Contact = () => {
 								<Input
 									type="text"
 									mt={2}
+									fontSize={{ base: 13, md: 16 }}
 									focusRingColor={"orange.300"}
 									ringColor={"rgba(66, 153, 225, 0.6)"}
 									borderColor={"rgba(196, 196, 196, 0.6)"}
@@ -226,6 +229,7 @@ const Contact = () => {
 								<Textarea
 									mt={2}
 									focusRingWidth={"1px"}
+									fontSize={{ base: 13, md: 16 }}
 									focusRingColor={"orange.300"}
 									ringColor={"rgba(66, 153, 225, 0.6)"}
 									borderColor={"rgba(196, 196, 196, 0.6)"}

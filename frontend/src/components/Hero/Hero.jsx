@@ -29,14 +29,20 @@ const Hero = () => {
 				</Text>
 				<Text as={"h3"} fontSize={24} lineHeight={"1"} className="font-semib">
 					And I'm a{" "}
-					<ReactTyped
-						strings={["Mern Stack Developer"]}
-						typeSpeed={100}
-						style={{ color: "#fb923c" }}
-						cursorChar="{}"
-						backSpeed={20}
-						loop
-					/>
+					<Text
+						as={"span"}
+						display={{ base: "block", md: "inline" }}
+						mt={{ base: "10px", md: 0 }}
+					>
+						<ReactTyped
+							strings={["Front End Developer"]}
+							typeSpeed={100}
+							style={{ color: "#fb923c" }}
+							// cursorChar="{}"
+							backSpeed={20}
+							loop
+						/>
+					</Text>
 				</Text>
 				<Box mt={10}>
 					<Link href="#contact">

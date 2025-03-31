@@ -7,7 +7,7 @@ const Footer = () => {
 	return (
 		<Container fluid paddingBlock={"50px"} bg={"blackAlpha.800"} color={"#fff"}>
 			<Container maxW={"1300px"}>
-				<VStack spaceY={4} textAlign={"center"}>
+				<VStack spaceY={3} textAlign={"center"}>
 					<Link href="" color={"white"} textDecoration={"none"}>
 						<Text
 							fontSize={{ base: 23, md: 30 }}
@@ -29,7 +29,7 @@ const Footer = () => {
 						above to set your project in motion.
 					</Text>
 
-					<Box paddingBlock={5}>
+					<Box paddingBlock={1}>
 						<SocialLinks />
 					</Box>
 					<Text fontSize={{ base: 15, md: 17 }}>

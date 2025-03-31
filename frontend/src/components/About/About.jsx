@@ -10,7 +10,7 @@ const About = () => {
 	return (
 		<Container
 			paddingBlock={"80px"}
-			paddingInline={"30px"}
+			paddingInline={"10px"}
 			id="about"
 			transition={"all .2s ease-in-out"}
 		>
@@ -105,14 +105,15 @@ const About = () => {
 						textWrap={"no-wrap"}
 						transition={".4 ease-in-out"}
 					>
-						I'm Ridwan and I'm a{" "}
-						<ReactTyped
+						I'm Ridwan and
+						{/* I'm a{" "} */}
+						{/* <ReactTyped
 							strings={["Front-End Developer"]}
 							typeSpeed={130}
 							backSpeed={40}
 							style={{ color: "#fb923c" }}
 							loop
-						/>
+						/> */}
 					</Text>
 					<Text
 						fontSize={{ base: 15, md: 18 }}
