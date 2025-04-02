@@ -11,11 +11,11 @@ import BackToTop from "./components/BackToTop";
 import { Toaster } from "./components/ui/toaster";
 import Footer from "./components/Footer/Footer";
 import FullPageLoader from "./components/FullPageLoader";
-import usePageLoad from "./context/usePageLoad";
+// import usePageLoad from "./context/usePageLoad";
 
 function App() {
 	const backgroundImage = "/images/bg-image.webp";
-	const { isLoading } = usePageLoad(backgroundImage);
+	// const { isLoading } = usePageLoad(backgroundImage);
 	const [isSticky, setSticky] = useState(false);
 
 	useEffect(() => {
@@ -41,7 +41,7 @@ function App() {
 
 	return (
 		<>
-			{isLoading && <FullPageLoader />}
+			{/* {isLoading && <FullPageLoader />} */}
 			<Container fluid margin={0} padding={0} pos={"relative"}>
 				<BackToTop isSticky={isSticky} />
 				<Container

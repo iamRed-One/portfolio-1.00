@@ -26,12 +26,12 @@ router.post("/", async (req, res) => {
     if (!name || !subject || !email || !message) {
       return res
         .status(400)
-        .json({ status: false, message: "Missing required fields" });
+        .json({ success: false, message: "Missing required fields" });
     }
 
     const mailOptions = {
       from: email,
-      to: SENDER_EMAIL,
+      to: "oladeleambali@gmail.com",
       replyTo: email,
       subject: subject,
       html: `
@@ -42,9 +42,7 @@ router.post("/", async (req, res) => {
 
     const info = await transporter.sendMail(mailOptions);
     console.log("Email Sent: ", info.response);
-    res
-      .status(200)
-      .json({ status: "success", message: "Email sent successfully" });
+    res.status(200).json({ success: true, message: "Email sent successfully" });
   } catch (error) {
     console.error("Error sending email", error);
     res.status(500).json({

@@ -39,7 +39,7 @@ const Navbar = ({ isSticky }) => {
 	return (
 		<Container
 			maxW="full"
-			padding={isSticky ? 3 : 7}
+			padding={isSticky ? "13px 6px" : 7}
 			transition={"padding .2s ease-in-out"}
 			bg={isSticky && "blackAlpha.800"}
 			display={"flex"}

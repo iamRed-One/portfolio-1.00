@@ -32,7 +32,7 @@ const Services = () => {
 							key={num}
 							w={{
 								base: "100%",
-								md: "350px",
+								md: "380px",
 							}}
 							bg={"orange.400"}
 							padding={"25px 20px"}

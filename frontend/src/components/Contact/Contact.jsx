@@ -46,33 +46,26 @@ const Contact = () => {
 			duration: null,
 		});
 
-		try {
-			const res = await fetch("http://localhost:5000/api/sendmail", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify(newMail),
+		const res = await fetch("http://localhost:5000/api/sendmail", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(newMail),
+		});
+		toaster.dismiss(loadingToast);
+
+		const data = await res.json();
+		const { success, message } = data;
+
+		if (!success) {
+			toaster.create({
+				title: "Error",
+				description: message,
+				type: "error",
+				duration: 3000,
 			});
-			toaster.dismiss(loadingToast);
-
-			if (!res.ok) {
-				throw new Error(`HTTP error! status: ${res.status}`);
-			}
-
-			const data = await res.json();
-			const { status, message } = data;
-
-			if (!status) {
-				toaster.create({
-					title: "Error",
-					description: message || "Failed to send message",
-					type: "error",
-					duration: 3000,
-				});
-				return false;
-			}
-
+		} else {
 			toaster.create({
 				title: "Success!",
 				description: "Message sent successfully",
@@ -85,28 +78,13 @@ const Contact = () => {
 				type: "info",
 				duration: 5000,
 			});
-
-			setSendMail({ name: "", email: "", subject: "", message: "" });
-			return true;
-		} catch (error) {
-			toaster.dismiss(loadingToast);
-			console.error("Mail sending error!", error);
-
-			toaster.create({
-				title: "Sending failed",
-				description: error.message.includes("Failed to fetch")
-					? "Nerwork error - please check your conncetion"
-					: "Something went wrong. Please try again later.",
-				type: "error",
-				duration: 5000,
-			});
-
-			return false;
 		}
+
+		setSendMail({ name: "", email: "", subject: "", message: "" });
 	};
 
 	return (
-		<Container id="contact" paddingBlock={"80px"} paddingInline={"12px"}>
+		<Container id="contact" paddingBlock={"80px"} paddingInline={"10px"}>
 			<Container maxW={"1300px"}>
 				<HeaderText title={"Contact"} desc={"Get in touch"} />
 
@@ -116,7 +94,7 @@ const Contact = () => {
 					gap={10}
 					flexDir={{ base: "column-reverse", md: "row" }}
 				>
-					<Box>
+					<Box w={{ base: "full", md: "initial" }}>
 						<Box mb={7}>
 							<Text
 								as={"h1"}
@@ -171,9 +149,8 @@ const Contact = () => {
 									<Input
 										type="text"
 										mt={2}
-										fontSize={{ base: 13, md: 16 }}
-										focusRingColor={"orange.300"}
-										ringColor={"rgba(66, 153, 225, 0.6)"}
+										fontSize={{ base: 13, md: 15 }}
+										focusRingColor={"orange.400"}
 										borderColor={"rgba(196, 196, 196, 0.6)"}
 										p={"22px 10px"}
 										placeholder="Name"
@@ -188,9 +165,8 @@ const Contact = () => {
 									<Input
 										type="email"
 										mt={2}
-										fontSize={{ base: 13, md: 16 }}
-										focusRingColor={"orange.300"}
-										ringColor={"rgba(66, 153, 225, 0.6)"}
+										fontSize={{ base: 13, md: 15 }}
+										focusRingColor={"orange.400"}
 										borderColor={"rgba(196, 196, 196, 0.6)"}
 										p={"22px 10px"}
 										placeholder="example@gmail.com"
@@ -206,12 +182,11 @@ const Contact = () => {
 								<Input
 									type="text"
 									mt={2}
-									fontSize={{ base: 13, md: 16 }}
-									focusRingColor={"orange.300"}
-									ringColor={"rgba(66, 153, 225, 0.6)"}
+									fontSize={{ base: 13, md: 15 }}
+									focusRingColor={"orange.400"}
 									borderColor={"rgba(196, 196, 196, 0.6)"}
 									p={"22px 10px"}
-									placeholder="Web Design, Ui Conversion, Frontend Dev"
+									placeholder="UI Conversion Request"
 									value={sendMail.subject}
 									onChange={(e) =>
 										setSendMail({ ...sendMail, subject: e.target.value })
@@ -229,12 +204,12 @@ const Contact = () => {
 								<Textarea
 									mt={2}
 									focusRingWidth={"1px"}
-									fontSize={{ base: 13, md: 16 }}
-									focusRingColor={"orange.300"}
-									ringColor={"rgba(66, 153, 225, 0.6)"}
+									fontSize={{ base: 13, md: 15 }}
+									focusRingColor={"orange.400"}
 									borderColor={"rgba(196, 196, 196, 0.6)"}
-									placeholder="I want to hire you to convert my figma designs to code 😊"
-									p={"22px 10px"}
+									placeholder="... 😊"
+									p={"10px 10px"}
+									h={"100px"}
 									value={sendMail.message}
 									onChange={(e) =>
 										setSendMail({ ...sendMail, message: e.target.value })
@@ -247,7 +222,6 @@ const Contact = () => {
 									styles={{
 										color: "black",
 										marginTop: "-40px",
-										fontSize: "16px",
 									}}
 									bgEffect={false}
 									onClick={() => handleSendMail(sendMail)}

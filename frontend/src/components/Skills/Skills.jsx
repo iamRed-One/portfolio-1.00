@@ -5,7 +5,7 @@ import skills from "./Data";
 
 const Skills = () => {
 	return (
-		<Container paddingBlock={"80px"} paddingInline={"30px"} id="skills">
+		<Container paddingBlock={"80px"} paddingInline={"10px"} id="skills">
 			<Container maxW={"1300px"}>
 				<HeaderText title={"My Skills"} desc={"What i know"} />
 
