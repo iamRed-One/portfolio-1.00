@@ -18,12 +18,11 @@ A modern, high-performance portfolio website with contact functionality built wi
 
 ### Frontend
 
-| Technology                                                                                                      | Purpose                                                                                 |
-| --------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ----------------- | --- |
-| ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)                | Next-gen frontend tooling                                                               |
-| ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)             | Component-based UI                                                                      |
-| ![Chakra UI](https://img.shields.io/badge/Chakra--UI-319795?style=for-the-badge&logo=chakra-ui&logoColor=white) | Accessible design system                                                                |
-| <!--                                                                                                            | ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge) | Smooth animations | --> |
+| Technology                                                                                                      | Purpose                   |
+| --------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| ![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)                | Next-gen frontend tooling |
+| ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)             | Component-based UI        |
+| ![Chakra UI](https://img.shields.io/badge/Chakra--UI-319795?style=for-the-badge&logo=chakra-ui&logoColor=white) | Accessible design system  |
 
 ### Backend
 
